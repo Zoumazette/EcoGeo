@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Item{% endblock %}
+
+{% block body %}
+    <h1>Item</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ item.id }}</td>
+            </tr>
+            <tr>
+                <th>Item_name</th>
+                <td>{{ item.itemName }}</td>
+            </tr>
+            <tr>
+                <th>Item_position</th>
+                <td>{{ item.itemPosition ? item.itemPosition|json_encode : '' }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ item.description }}</td>
+            </tr>
+            <tr>
+                <th>Item_level</th>
+                <td>{{ item.itemLevel }}</td>
+            </tr>
+            <tr>
+                <th>Created_at</th>
+                <td>{{ item.createdAt ? item.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Created_by</th>
+                <td>{{ item.createdBy }}</td>
+            </tr>
+            <tr>
+                <th>Updated_at</th>
+                <td>{{ item.updatedAt ? item.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Updated_by</th>
+                <td>{{ item.updatedBy }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('item_index') }}">back to list</a>
+
+    <a href="{{ path('item_edit', {'id': item.id}) }}">edit</a>
+
+    {{ include('item/_delete_form.html.twig') }}
+{% endblock %}

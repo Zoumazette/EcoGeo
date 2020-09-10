@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Success{% endblock %}
+
+{% block body %}
+    <h1>Success</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ success.id }}</td>
+            </tr>
+            <tr>
+                <th>Success_name</th>
+                <td>{{ success.successName }}</td>
+            </tr>
+            <tr>
+                <th>Logo</th>
+                <td>{{ success.logo }}</td>
+            </tr>
+            <tr>
+                <th>Success_level</th>
+                <td>{{ success.successLevel }}</td>
+            </tr>
+            <tr>
+                <th>Created_at</th>
+                <td>{{ success.createdAt ? success.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Created_by</th>
+                <td>{{ success.createdBy }}</td>
+            </tr>
+            <tr>
+                <th>Updated_at</th>
+                <td>{{ success.updatedAt ? success.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Updated_by</th>
+                <td>{{ success.updatedBy }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('success_index') }}">back to list</a>
+
+    <a href="{{ path('success_edit', {'id': success.id}) }}">edit</a>
+
+    {{ include('success/_delete_form.html.twig') }}
+{% endblock %}

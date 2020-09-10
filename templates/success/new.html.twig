@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Success{% endblock %}
+
+{% block body %}
+    <h1>Create new Success</h1>
+
+    {{ include('success/_form.html.twig') }}
+
+    <a href="{{ path('success_index') }}">back to list</a>
+{% endblock %}

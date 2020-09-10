@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Success index{% endblock %}
+
+{% block body %}
+    <h1>Success index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Success_name</th>
+                <th>Logo</th>
+                <th>Success_level</th>
+                <th>Created_at</th>
+                <th>Created_by</th>
+                <th>Updated_at</th>
+                <th>Updated_by</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for success in successes %}
+            <tr>
+                <td>{{ success.id }}</td>
+                <td>{{ success.successName }}</td>
+                <td>{{ success.logo }}</td>
+                <td>{{ success.successLevel }}</td>
+                <td>{{ success.createdAt ? success.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ success.createdBy }}</td>
+                <td>{{ success.updatedAt ? success.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ success.updatedBy }}</td>
+                <td>
+                    <a href="{{ path('success_show', {'id': success.id}) }}">show</a>
+                    <a href="{{ path('success_edit', {'id': success.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="9">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('success_new') }}">Create new</a>
+{% endblock %}
