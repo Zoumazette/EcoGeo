@@ -15,10 +15,10 @@ class SuccessType extends AbstractType
             ->add('success_name')
             ->add('logo')
             ->add('success_level')
-            ->add('created_at')
+            
             ->add('created_by')
-            ->add('updated_at')
-            ->add('updated_by')
+            
+            
             ->add('user')
         ;
     }

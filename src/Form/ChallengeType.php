@@ -14,10 +14,10 @@ class ChallengeType extends AbstractType
         $builder
             ->add('challenge_name')
             ->add('challenge_position')
-            ->add('created_at')
+            
             ->add('created_by')
-            ->add('updated_at')
-            ->add('updated_by')
+            
+            
             ->add('user')
         ;
     }

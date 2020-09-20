@@ -8,7 +8,7 @@
     <table class="table">
         <thead>
             <tr>
-                <th>Id</th>
+                
                 <th>Nom du challenge</th>
                 <th>Position</th>
                 <th>Créer le</th>
@@ -21,7 +21,7 @@
         <tbody>
         {% for challenge in challenges %}
             <tr>
-                <td>{{ challenge.id }}</td>
+                
                 <td>{{ challenge.challengeName }}</td>
                 <td>{{ challenge.challengePosition ? challenge.challengePosition|json_encode : '' }}</td>
                 <td>{{ challenge.createdAt ? challenge.createdAt|date('Y-m-d H:i:s') : '' }}</td>

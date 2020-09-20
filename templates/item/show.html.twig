@@ -7,16 +7,13 @@
 
     <table class="table">
         <tbody>
+            
             <tr>
-                <th>Id</th>
-                <td>{{ item.id }}</td>
-            </tr>
-            <tr>
-                <th>Item_name</th>
+                <th>Nom de l'item</th>
                 <td>{{ item.itemName }}</td>
             </tr>
             <tr>
-                <th>Item_position</th>
+                <th>Localisation</th>
                 <td>{{ item.itemPosition ? item.itemPosition|json_encode : '' }}</td>
             </tr>
             <tr>
@@ -24,31 +21,31 @@
                 <td>{{ item.description }}</td>
             </tr>
             <tr>
-                <th>Item_level</th>
+                <th>Niveau de difficulté</th>
                 <td>{{ item.itemLevel }}</td>
             </tr>
             <tr>
-                <th>Created_at</th>
+                <th>Créer le</th>
                 <td>{{ item.createdAt ? item.createdAt|date('Y-m-d H:i:s') : '' }}</td>
             </tr>
             <tr>
-                <th>Created_by</th>
+                <th>Créer par</th>
                 <td>{{ item.createdBy }}</td>
             </tr>
             <tr>
-                <th>Updated_at</th>
+                <th>Mis à jour le</th>
                 <td>{{ item.updatedAt ? item.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
             </tr>
             <tr>
-                <th>Updated_by</th>
+                <th>Mis à jour par</th>
                 <td>{{ item.updatedBy }}</td>
             </tr>
         </tbody>
     </table>
 
-    <a href="{{ path('item_index') }}">back to list</a>
+    <a href="{{ path('item_index') }}">Retour à la liste</a>
 
-    <a href="{{ path('item_edit', {'id': item.id}) }}">edit</a>
+    <a href="{{ path('item_edit', {'id': item.id}) }}">Editer</a>
 
     {{ include('item/_delete_form.html.twig') }}
 {% endblock %}

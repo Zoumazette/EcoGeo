@@ -1,18 +1,15 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Success{% endblock %}
+{% block title %}Succes{% endblock %}
 
 {% block body %}
-    <h1>Success</h1>
+    <h1>Succes</h1>
 
     <table class="table">
         <tbody>
+            
             <tr>
-                <th>Id</th>
-                <td>{{ success.id }}</td>
-            </tr>
-            <tr>
-                <th>Success_name</th>
+                <th>Nom du suuces</th>
                 <td>{{ success.successName }}</td>
             </tr>
             <tr>
@@ -20,31 +17,31 @@
                 <td>{{ success.logo }}</td>
             </tr>
             <tr>
-                <th>Success_level</th>
+                <th>Niveau du succes</th>
                 <td>{{ success.successLevel }}</td>
             </tr>
             <tr>
-                <th>Created_at</th>
+                <th>Créer le</th>
                 <td>{{ success.createdAt ? success.createdAt|date('Y-m-d H:i:s') : '' }}</td>
             </tr>
             <tr>
-                <th>Created_by</th>
+                <th>Créer par</th>
                 <td>{{ success.createdBy }}</td>
             </tr>
             <tr>
-                <th>Updated_at</th>
+                <th>Mis à jour le</th>
                 <td>{{ success.updatedAt ? success.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
             </tr>
             <tr>
-                <th>Updated_by</th>
+                <th>Mis à jour par</th>
                 <td>{{ success.updatedBy }}</td>
             </tr>
         </tbody>
     </table>
 
-    <a href="{{ path('success_index') }}">back to list</a>
+    <a href="{{ path('success_index') }}">Retour à la liste</a>
 
-    <a href="{{ path('success_edit', {'id': success.id}) }}">edit</a>
+    <a href="{{ path('success_edit', {'id': success.id}) }}">Editer</a>
 
     {{ include('success/_delete_form.html.twig') }}
 {% endblock %}

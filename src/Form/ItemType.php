@@ -16,10 +16,10 @@ class ItemType extends AbstractType
             ->add('item_position')
             ->add('description')
             ->add('item_level')
-            ->add('created_at')
+            
             ->add('created_by')
-            ->add('updated_at')
-            ->add('updated_by')
+            
+            
             ->add('user')
             ->add('challenge')
         ;

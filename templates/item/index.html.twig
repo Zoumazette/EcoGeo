@@ -1,23 +1,23 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Item index{% endblock %}
+{% block title %}Liste des items{% endblock %}
 
 {% block body %}
-    <h1>Item index</h1>
+    <h1>Liste des items</h1>
 
     <table class="table">
         <thead>
             <tr>
-                <th>Id</th>
-                <th>Item_name</th>
-                <th>Item_position</th>
+                
+                <th>Nom de l'item</th>
+                <th>Position</th>
                 <th>Description</th>
-                <th>Item_level</th>
-                <th>Created_at</th>
-                <th>Created_by</th>
-                <th>Updated_at</th>
-                <th>Updated_by</th>
-                <th>actions</th>
+                <th>Niveau de difficulté</th>
+                <th>Créer le</th>
+                <th>Créer par</th>
+                <th>Mis à jour le</th>
+                <th>Mis à jour par</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -39,11 +39,11 @@
             </tr>
         {% else %}
             <tr>
-                <td colspan="10">no records found</td>
+                <td colspan="10">Aucun item trouvé</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
 
-    <a href="{{ path('item_new') }}">Create new</a>
+    <a href="{{ path('item_new') }}">Nouveau</a>
 {% endblock %}

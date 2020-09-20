@@ -1,13 +1,13 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Edit Success{% endblock %}
+{% block title %}Modification d'un succes{% endblock %}
 
 {% block body %}
-    <h1>Edit Success</h1>
+    <h1>Modification d'un succes</h1>
 
     {{ include('success/_form.html.twig', {'button_label': 'Update'}) }}
 
-    <a href="{{ path('success_index') }}">back to list</a>
+    <a href="{{ path('success_index') }}">Retour à la liste</a>
 
     {{ include('success/_delete_form.html.twig') }}
 {% endblock %}
