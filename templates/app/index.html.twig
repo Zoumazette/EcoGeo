@@ -1,10 +1,16 @@
 {% extends 'base.html.twig' %}
+        
+{% block title %}Bienvenu!{% endblock %}
 
 {% block body %}
-    
-    <h1> Bienvenu ! </h1>
+<style>
+    .fill { background-image: url('{{asset('public/images/sj-objio-tLPZmcu-JPc-unsplash.jpg')}}'); }
+    a { color: #F5F5F5; }
+</style>
 
-    <button class="btn btn-info" href="{{ path('security_login')}}">Se connecter</button>
-    <button class="btn btn-info" href="{{ path('security_registration')}}">S'enregistrer</button>
-    
+<div class="fill">
+    <h1> Bienvenu ! </h1>
+    <button class="btn btn-primary"> <a href="{{ path('security_login') }}">Se connecter</a></button>
+    <button class="btn btn-primary"> <a href="{{ path('security_registration') }}">S'enregistrer</a></button>
+</div>
 {% endblock %}
